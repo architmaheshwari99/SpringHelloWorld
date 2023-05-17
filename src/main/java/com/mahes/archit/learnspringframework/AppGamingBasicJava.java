@@ -5,10 +5,13 @@ public class AppGamingBasicJava {
     public static void main(String[] args) {
 
         var marioGame = new MarioGame();
-// We would need to change GameRunner constructor
-//  to run contraGame. This is tight coupling
+
         var contraGame = new ContraGame();
-        var gameRunner = new GameRunner(marioGame);
+
+        var pacmanGame = new PacmanGame();
+//  Using GamingConsole in the gameRunner class to enable loose coupling
+//  of runner and game.
+        var gameRunner = new GameRunner(contraGame);
 
         gameRunner.run();
 

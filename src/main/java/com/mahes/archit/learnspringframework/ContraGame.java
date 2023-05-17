@@ -1,6 +1,6 @@
 package com.mahes.archit.learnspringframework;
 
-public class ContraGame {
+public class ContraGame implements GamingConsole{
 
     public void up() {
         System.out.println("Jump");
