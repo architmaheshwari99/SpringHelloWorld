@@ -1,5 +1,6 @@
 package com.mahes.archit.learnspringframework;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -33,7 +34,7 @@ public class HelloWorldConfiguration {
     }
 
     @Bean(name="person3")
-    public Person person3Parameters(String name, int age, Address address2){
+    public Person person3Parameters(String name, int age, @Qualifier("address3") Address address2){
         return new Person(name, age, address2);
     }
 

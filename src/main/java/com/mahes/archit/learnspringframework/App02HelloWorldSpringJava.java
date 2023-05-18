@@ -18,6 +18,8 @@ public class App02HelloWorldSpringJava {
         System.out.println(context.getBean("person"));
         System.out.println(context.getBean(Address.class));
         System.out.println(context.getBean("person2"));
+
+//      As we are using @Qualifier, person3 will have the specific wired bean
         System.out.println(context.getBean("person3"));
 
 
