@@ -1,4 +1,4 @@
-package com.mahes.archit.learnspringframework;
+package com.mahes.archit.learnspringframework.game;
 
 public class MarioGame implements GamingConsole{
 
