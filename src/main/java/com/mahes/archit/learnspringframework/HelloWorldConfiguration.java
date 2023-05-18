@@ -3,7 +3,7 @@ package com.mahes.archit.learnspringframework;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-record Person(String name, int age) {};
+record Person(String name, int age, Address address) {};
 
 record Address(String firstLine, String city) {};
 
@@ -23,12 +23,27 @@ public class HelloWorldConfiguration {
 
     @Bean
     public Person person(){
-        return new Person("Archit", 24);
+        return new Person("Archit", 24, new Address("Baker Street", "London"));
+    }
+
+    @Bean(name="person2")
+    public Person person2MethodCall(){
+        return new Person(name(), age(), address());
+    }
+
+    @Bean(name="person3")
+    public Person person3Parameters(String name, int age, Address address2){
+        return new Person(name, age, address2);
     }
 
     @Bean(name = "address2")
     public Address address(){
         return new Address("Baker Street", "London");
+    }
+
+    @Bean(name = "address3")
+    public Address address3(){
+        return new Address("Potter Street", "Paris");
     }
 
 }
