@@ -1,5 +1,10 @@
 package com.mahes.archit.learnspringframework.game;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+@Primary
 public class ContraGame implements GamingConsole{
 
     public void up() {

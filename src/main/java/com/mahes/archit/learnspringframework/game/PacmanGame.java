@@ -1,5 +1,8 @@
 package com.mahes.archit.learnspringframework.game;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PacmanGame implements GamingConsole{
 
     public void up() {
