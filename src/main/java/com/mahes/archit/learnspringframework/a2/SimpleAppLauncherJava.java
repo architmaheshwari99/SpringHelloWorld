@@ -11,11 +11,20 @@ import java.util.Arrays;
 @Component
 class YourBusinessClass{
 
-    @Autowired
     Dependency1 d1;
 
-    @Autowired
     Dependency2 d2;
+
+
+    @Autowired
+    public void setD1(Dependency1 d1) {
+        this.d1 = d1;
+    }
+
+    @Autowired
+    public void setD2(Dependency2 d2) {
+        this.d2 = d2;
+    }
 
     @Override
     public String toString() {
