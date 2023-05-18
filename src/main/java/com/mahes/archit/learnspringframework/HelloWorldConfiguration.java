@@ -26,7 +26,7 @@ public class HelloWorldConfiguration {
         return new Person("Archit", 24);
     }
 
-    @Bean
+    @Bean(name = "address2")
     public Address address(){
         return new Address("Baker Street", "London");
     }
