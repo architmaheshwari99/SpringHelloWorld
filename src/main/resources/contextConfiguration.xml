@@ -16,5 +16,10 @@
 
     <context:component-scan base-package="com.mahes.archit.learnspringframework.game"/>
 
+    <bean id="game" class="com.mahes.archit.learnspringframework.game.ContraGame" />
+
+    <bean id="gameRunner" class="com.mahes.archit.learnspringframework.game.GameRunner" >
+        <constructor-arg ref="game"></constructor-arg>
+    </bean>
 
 </beans>

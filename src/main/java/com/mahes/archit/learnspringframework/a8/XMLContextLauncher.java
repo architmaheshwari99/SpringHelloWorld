@@ -1,5 +1,6 @@
 package com.mahes.archit.learnspringframework.a8;
 
+import com.mahes.archit.learnspringframework.game.GameRunner;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -19,6 +20,8 @@ public class XMLContextLauncher {
         );
 
         System.out.println(context.getBean("name"));
+
+        context.getBean(GameRunner.class).run();
 
     }
 
