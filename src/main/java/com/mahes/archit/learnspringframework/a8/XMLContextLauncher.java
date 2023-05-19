@@ -18,6 +18,8 @@ public class XMLContextLauncher {
                 System.out::println
         );
 
+        System.out.println(context.getBean("name"));
+
     }
 
 }
